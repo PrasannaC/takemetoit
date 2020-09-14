@@ -23,8 +23,7 @@ baseRouter.get('/:id', async (req, res) => {
         const hash = req.params.id
         let result = await urls.find({ shortHash: hash })
         if (result.length > 0) {
-            console.log(result[0])
-            if (result[0]?.srcUrl) {
+            if (result[0] && result[0].srcUrl) {
                 res.status(301)
                 res.redirect(result[0].srcUrl)
             }
