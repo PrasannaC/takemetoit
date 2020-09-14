@@ -69,7 +69,7 @@
                     let json = await response.json()
                     console.log(json)
                     if (json.shortened) {
-                        $('#results').html(`<h3 class="border: 1px solid;padding: 6%;border-radius: 1rem;display-4">
+                        $('#results').html(`<h3 style="border: 1px solid;padding: 6%;border-radius: 1rem;" class="display-4">
                             Shortened URL: <br> ${json.shortened}</h3>`)
                     }
                 }
