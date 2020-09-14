@@ -44,9 +44,7 @@ baseRouter.post('/', async (req, res) => {
         res.status(500)
         res.json({ error: 'Invalid URL format' })
     }
-
     const shortHash = nanoid(6)
-
     const dbObj = {
         srcUrl: value,
         shortHash
@@ -56,7 +54,7 @@ baseRouter.post('/', async (req, res) => {
     res.json({ shortened: `${process.env.DEPLOYED_URL}${shortHash}` })
 })
 
-app.use('/takeme', baseRouter)
+app.use('/', baseRouter)
 
 const port = process.env.PORT || 4000
 app.listen(port, () => {
