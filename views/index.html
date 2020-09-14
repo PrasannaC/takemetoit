@@ -50,7 +50,7 @@
             $('#crunchBtn').on('click', async (e) => {
                 try {
                     console.log($('#URLBox').val())
-                    const url = 'http://localhost:4000/takeme'
+                    const url = 'https://takemeto.herokuapp.com/takeme'
                     const response = await fetch(url, {
                         method: 'POST', // *GET, POST, PUT, DELETE, etc.
                         mode: 'cors', // no-cors, *cors, same-origin
